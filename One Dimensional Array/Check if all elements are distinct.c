@@ -8,7 +8,7 @@ int main()
 		scanf("%d",&arr[i]);
 	}
 	for(int i=0; i<n; i++){
-	    for(int j=i+1;j<n-1;j++){
+	    for(int j=i+1;j<n;j++){
 	        if(arr[i]==arr[j]){
 	            count=1;
 	            break;
@@ -19,4 +19,5 @@ int main()
 	printf("All are Distinct Elements");
 	else
 	printf("All are not Distinct Elements");
+
 }
