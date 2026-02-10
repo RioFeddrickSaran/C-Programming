@@ -9,3 +9,4 @@ int main(){
     i++;}    
     printf("%d",sum);
 }
+
