@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+    int a,n,t,count=0,power,digit,sum=0;
+    scanf("%d",&a);
+    for(int i=1;i<a;i++){
+    count=0;
+    sum=0;
+    n=i;
+    t=n; 
+    while(t>0){
+        count++;
+        t/=10; }
+    t=n;
+    while(t>0){
+       power=1;
+       digit=t%10;
+       for(int i=0;i<count;i++){
+        power=power*digit;}
+        sum+=power;
+        t/=10;}
+    if(n==sum){
+    printf("%d ",sum);}}
+}
