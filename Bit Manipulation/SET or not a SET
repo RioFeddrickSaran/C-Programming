@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main(){
+    int n,k;
+    scanf("%d %d",&n,&k);
+    if(n&(1<<k)){
+        printf("%d-th bit is SET",k);}
+    else{
+        printf("%d-th bit is NOT SET",k);}}
