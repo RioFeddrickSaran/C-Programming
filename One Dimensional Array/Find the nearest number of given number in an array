@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n,c;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);}
+    scanf("%d",&c);
+    int nearest = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (abs(arr[i]-c)<abs(nearest-c)) {
+            nearest = arr[i];}}
+    printf("%d",nearest);}
