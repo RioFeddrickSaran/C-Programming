@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main(){
+    int n,k;
+    scanf("%d %d",&n,&k);
+    n=n&~(1<<k);
+        printf("After clearing %d-th bit: %d",k,n);}
