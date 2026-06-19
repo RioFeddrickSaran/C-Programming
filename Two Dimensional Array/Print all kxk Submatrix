@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(){
+    int n,m,k;
+    scanf("%d %d %d",&n,&m,&k);
+    int arr[n][m];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+        scanf("%d",&arr[i][j]);}}
+    for(int i=0;i<=n-k;i++){
+        for(int j=0;j<=m-k;j++){
+            for(int r=i;r<i+k;r++){
+               for(int c=j;c<j+k;c++){
+            printf("%d ",arr[r][c]);}
+        printf("\n");}}}}
