@@ -4,7 +4,5 @@ int main(){
     scanf("%d",&n); 
     while(n>0){
         rev=rev*10+n%10;
-        n/=10;
-    }
-    printf("%d",rev);
-}
+        n/=10;}
+    printf("%d",rev);}
