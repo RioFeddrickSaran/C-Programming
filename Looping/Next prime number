@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(){
+    int n,ct=0;
+    scanf("%d",&n);
+    for(int i=n+1;i>0;i++){
+        ct=0;
+        for(int j=1;j<=i;j++){
+            if(i%j==0){
+                ct++;}}
+        if(ct==2){
+            printf("%d",i);
+            break;}}}
