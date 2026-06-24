@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    int n,num=0,rev=0;
+    scanf("%d",&n);
+    while(n>0){
+        if((n%10)%2!=0){
+           num=num*10+(n%10);}
+        n/=10;}
+    while(num>0){
+        rev=rev*10+(num%10);
+        num/=10;}
+    printf("%d",rev);}
