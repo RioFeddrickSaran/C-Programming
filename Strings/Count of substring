@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[100];
+    int count=1;
+    scanf("%s",str);
+    int len=strlen(str);
+    for(int start=0;start<len;start++){
+        count=1;
+     for(int end=start;end<len;end++){
+        printf("%d - ",count++);
+      for(int i=start;i<=end;i++){
+          printf("%c ",str[i]);}
+        printf("\n");}}}
