@@ -1,0 +1,10 @@
+#include <stdio.h>
+int max(int x,int y){
+    return x>y?x:y;}
+int main(){
+    int n,maxv,val;
+    scanf("%d%d",&n,&maxv);
+    for(int i=1;i<n;i++){
+        scanf("%d",&val);
+        maxv=max(maxv,val);}
+    printf("%d\n",maxv);}
