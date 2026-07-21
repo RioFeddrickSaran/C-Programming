@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int*findDisappearedNumbers(int*nums,int numsSize,int*returnSize){
+char present[100002]={0};
+int*ans=malloc(numsSize*sizeof(int));
+int count=0;
+for(int i=0;i<numsSize;i++){
+if(nums[i]>0&&nums[i]<=100001)
+present[nums[i]]=1;}
+for(int i=1;i<=numsSize;i++){
+if(present[i]==0)
+ans[count++]=i;}
+*returnSize=count;
+return ans;}
+int main(){
+int n;
+scanf("%d",&n);
+int*nums=malloc(n*sizeof(int));
+for(int i=0;i<n;i++)
+scanf("%d",&nums[i]);
+int returnSize;
+int*ans=findDisappearedNumbers(nums,n,&returnSize);
+for(int i=0;i<returnSize;i++)
+printf("%d ",ans[i]);
+free(nums);
+free(ans);}
