@@ -1,0 +1,17 @@
+#include<stdio.h>
+int maxArea(int*height,int heightSize){
+int left=0,right=heightSize-1;
+int water=0;
+while(left<right){
+int h=(height[left]<height[right])?height[left]:height[right];
+int area=h*(right-left);
+if(area>water)water=area;
+if(height[left]<height[right])left++;
+else right--;}
+return water;}
+int main(){
+int n;
+scanf("%d",&n);
+int height[n];
+for(int i=0;i<n;i++)scanf("%d",&height[i]);
+printf("%d",maxArea(height,n));}
