@@ -1,1 +1,31 @@
-.
+#include<stdio.h>
+void setZeroes(int**matrix,int matrixSize,int*matrixColSize){
+int arr[matrixSize][*matrixColSize];
+for(int i=0;i<matrixSize;i++){
+for(int j=0;j<*matrixColSize;j++){
+arr[i][j]=matrix[i][j];}}
+for(int i=0;i<matrixSize;i++){
+for(int j=0;j<*matrixColSize;j++){
+if(matrix[i][j]==0){
+for(int k=0;k<matrixSize;k++){
+arr[k][j]=0;}
+for(int k=0;k<*matrixColSize;k++){
+arr[i][k]=0;}}}}
+for(int i=0;i<matrixSize;i++){
+for(int j=0;j<*matrixColSize;j++){
+matrix[i][j]=arr[i][j];}}}
+int main(){
+int r,c;
+scanf("%d%d",&r,&c);
+int a[r][c];
+int*matrix[r];
+for(int i=0;i<r;i++){
+matrix[i]=a[i];
+for(int j=0;j<c;j++)
+scanf("%d",&a[i][j]);}
+setZeroes(matrix,r,&c);
+for(int i=0;i<r;i++){
+for(int j=0;j<c;j++)
+printf("%d ",a[i][j]);
+printf("\n");
+}}
